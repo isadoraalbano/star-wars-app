@@ -1,0 +1,130 @@
+
+.App {
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  margin: 0%;
+  width: 100%;
+  align-items: center;
+}
+
+nav {
+  background-color: #3c3c3a;
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  box-shadow:0 10px 10px 0 rgba(0, 0, 0, 0.682)
+}
+
+img {
+  margin-top: 5px;
+  width: 80px;
+  height: 50px;
+}
+
+table {
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+table td {
+  border: 2px solid #ddd;
+  padding: 8px;
+ 
+}
+
+table tr:hover {background-color: #ddd; color: black}
+table th {
+  padding: 10px 8px;
+  text-align: left;
+  background-color: #FFE81F;
+  color: white;
+  border: 2px solid #ddd;
+}
+
+.home:hover{
+  color: black;
+}
+
+.home{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.link{
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  
+}
+
+.buttons-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ 
+}
+
+.buttons-container button {
+  width: 200px;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.image-container  img {
+  width: auto;
+  height: auto;
+}
+
+.search{
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search button{
+  cursor: pointer;
+  font-size: 15px;
+  width: 100px;
+  height: 40px;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination li {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pagination li.active {
+  font-weight: bold;
+}
+
+
+

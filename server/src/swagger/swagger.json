@@ -1,0 +1,111 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "Star Wars Consumer API",
+      "description": "This is an API that communicates with the external Star Wars API (https://swapi.dev/), returning data in an ordered manner."
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "tags": [
+      {
+        "name": "Star Wars",
+        "description": "Star Wars films, characters, starships and planets informations"
+      }
+    ],
+    "paths": {
+      "/characters": {
+        "get": {
+        "tags":["Star Wars"],
+          "summary": "Find all characters",
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/starships": {
+        "get": {
+        "tags":["Star Wars"],
+          "summary": "Find all starships",
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/planets": {
+        "get": {
+        "tags":["Star Wars"],
+          "summary": "Find all planets",
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/films": {
+        "get": {
+        "tags":["Star Wars"],
+          "summary": "Find all films or by title",
+          "parameters":[
+            {
+            "name": "title",
+            "description": "Title of the film to be searched",
+            "in": "query",
+            "require": false,
+            "schema":{
+                "type": "string"
+            }
+          }],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        },
+        "post": {
+          "summary": "Add the term to the search history",
+          "tags":["Star Wars"],
+          "parameters":[
+            {
+                "name": "title",
+                "in": "body",
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "required":true,
+                        "type": "string"
+                      }
+                    }
+                  }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      }
+    }
+  }
