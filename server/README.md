@@ -40,6 +40,8 @@ npm install
 cp .env.example .env
 ```
 4. Rode o comando para startar o servidor e aguarde o console de Server running para iniciar a utilização do servidor
+
+**OBS**: Certifique-se de ter o Mongo instalado e rodando na sua máquina antes de iniciar, pois ele é uma dependência do projeto
 ```bash
 npm run dev
 ```
